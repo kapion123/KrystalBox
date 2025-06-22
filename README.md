@@ -2,92 +2,108 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Krystalboxmc – Serwer Minecraft</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom, #004488, #001f33);
-      color: white;
+      background-color: #0b1a3d; /* ciemny niebieski */
+      color: #d0d9ff; /* jasny niebieski / biały */
     }
     header {
-      text-align: center;
+      background: linear-gradient(135deg, #3a69d8, #0a2a72);
+      color: #e6ecff;
       padding: 40px 20px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 50, 0.7);
     }
     header img {
       width: 120px;
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+      box-shadow: 0 0 15px rgba(58, 105, 216, 0.7);
     }
     main {
-      max-width: 1000px;
-      margin: auto;
+      max-width: 900px;
+      margin: -30px auto 0;
+      background: #13275c; /* ciemniejszy niebieski */
       padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 50, 0.5);
+      border-radius: 12px;
+    }
+    h1, h2 {
+      color: #b0c7ff; /* jaśniejszy niebieski */
     }
     .section {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 12px;
       margin-bottom: 30px;
-    }
-    h1, h2, h3 {
-      color: #00aaff;
     }
     .button {
       display: inline-block;
-      background: #0077cc;
+      background: #3a69d8;
       color: white;
       padding: 12px 20px;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      transition: background 0.3s;
+      box-shadow: 0 0 8px rgba(58, 105, 216, 0.7);
     }
     .button:hover {
-      background: #005fa3;
-    }
-    .team-grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .team-member {
-      background: rgba(255,255,255,0.05);
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-      flex: 1;
-      min-width: 150px;
-    }
-    .team-member img {
-      width: 100px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      border: 2px solid #00aaff;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 10px;
-      border: 2px solid #00aaff;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      margin-top: 10px;
+      background: #274ea6;
+      box-shadow: 0 0 12px rgba(39, 78, 166, 0.9);
     }
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #ccc;
-      background: #001a2b;
+      color: #99aaff;
+      margin-top: 30px;
+      background: #0a1f4a;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+      border-radius: 0 0 12px 12px;
+    }
+    img[alt="Status serwera Discord"] {
+      box-shadow: 0 0 15px rgba(58, 105, 216, 0.7);
+      border-radius: 12px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* Nowe style dla zespołu */
+    .team-container {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .team-member {
+      background: #1d367d;
+      border-radius: 12px;
+      padding: 15px;
+      width: 140px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(58, 105, 216, 0.6);
+      transition: transform 0.3s;
+    }
+    .team-member:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(90, 150, 255, 0.9);
+    }
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 12px rgba(58, 105, 216, 0.8);
+    }
+    .team-member-name {
+      font-weight: bold;
+      color: #c1d1ff;
+      font-size: 1.1em;
     }
   </style>
 </head>
@@ -101,76 +117,39 @@
 
   <main>
     <div class="section">
+      <h2>Statystyki Discord</h2>
+      <img src="https://discord.com/api/guilds/1370865731218047208/widget.png?style=banner2" alt="Status serwera Discord" />
+    </div>
+
+    <div class="section">
+      <h2>Zespół</h2>
+      <div class="team-container">
+        <div class="team-member">
+          <img src="https://i.imgur.com/TFSEKXs.png" alt="Kapion123" />
+          <div class="team-member-name">Kapion123</div>
+        </div>
+        <div class="team-member">
+          <img src="https://minotar.net/avatar/Kreatywny/120" alt="Kreatywny" />
+          <div class="team-member-name">Kreatywny</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
       <h2>O nas</h2>
       <p>Krystalboxmc to społeczność graczy Minecraft, oferująca unikalne tryby gry, aktywną administrację i świetną zabawę. Dołącz do nas i zobacz sam, co przygotowaliśmy!</p>
     </div>
 
     <div class="section">
-      <h2>Zespół</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="https://i.imgur.com/TFSEKXs.png" alt="Kapion123" />
-          <h3>Kapion123</h3>
-          <p>Właściciel</p>
-        </div>
-        <div class="team-member">
-          <img src="https://i.imgur.com/m72FnPw.png" alt="Kreatywny" />
-          <h3>Kreatywny</h3>
-          <p>Właściciel</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Dlaczego warto grać u nas?</h2>
-      <ul>
-        <li>✅ Stabilny serwer 24/7</li>
-        <li>✅ Aktywna administracja</li>
-        <li>✅ Unikalne systemy i pluginy</li>
-        <li>✅ Przyjazna społeczność</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Statystyki serwera Minecraft</h2>
-      <p><strong>IP:</strong> <code>83.168.69.7:30010</code></p>
-      <p><em>Status online będzie można dodać automatycznie w przyszłości przez API.</em></p>
-    </div>
-
-    <div class="section">
-      <h2>Aktualności</h2>
-      <p>🔥 Już niedługo nowy event z nagrodami! Śledź nasze ogłoszenia na Discordzie!</p>
-    </div>
-
-    <div class="section">
-      <h2>Galeria zdjęć z serwera</h2>
-      <div class="gallery-grid">
-        <img src="" alt="screen1">
-        <img src="" alt="screen2">
-        <img src="" alt="screen3">
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Twoja opinia</h2>
-      <p>Napisz, co sądzisz o naszym serwerze:</p>
-      <form>
-        <input type="text" placeholder="Nick z Minecrafta" required>
-        <textarea rows="4" placeholder="Twoja opinia..." required></textarea>
-        <button class="button" type="submit">Wyślij opinię</button>
-      </form>
+      <h2>Sklep serwera</h2>
+      <p>Chcesz wspomóc rozwój serwera lub kupić specjalne przedmioty? Zapraszamy do naszego itemshopu!</p>
+      <a href="https://vishop.pl/shop/21903" class="button" target="_blank" rel="noopener noreferrer">Przejdź do ItemShopu</a>
     </div>
 
     <div class="section">
       <h2>Kontakt & Społeczność</h2>
-      <p>Masz pytania? Dołącz do naszego Discorda!</p>
-      <a href="https://discord.gg/bfHsnGQ23m" class="button" target="_blank">Dołącz na Discorda</a>
-    </div>
-
-    <div class="section">
-      <h2>Sklep serwera</h2>
-      <p>Wspomóż nasz rozwój i kup specjalne przedmioty w naszym sklepie!</p>
-      <a href="https://vishop.pl/shop/21903" class="button" target="_blank">Przejdź do ItemShopu</a>
+      <p>Masz pytania? Dołącz do naszego Discorda i porozmawiaj z administracją lub graczami!</p>
+      <a href="https://discord.gg/bfHsnGQ23m" class="button" target="_blank" rel="noopener noreferrer">Dołącz na Discorda</a>
     </div>
   </main>
 
